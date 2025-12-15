@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>설문조사 폼</title>
+  </head>
+  <body>
+    <h1>설문조사 폼</h1>
+    <form action="#" method="post">
+      <div>
+        <h3>성별</h3>
+        <input type="radio" name="sex" id="male" />
+        <label for="male">남자</label>
+        <input type="radio" name="sex" id="female" />
+        <label for="female">여자</label>
+      </div>
+      <div>
+        <h3>좋아하는 음식(중복 선택 가능)</h3>
+        <input type="checkbox" name="food" id="한식" />
+        <label for="한식">한식</label>
+        <input type="checkbox" name="food" id="중식" />
+        <label for="중식">중식</label>
+        <input type="checkbox" name="food" id="일식" />
+        <label for="일식">일식</label>
+      </div>
+      <div>
+        <h3>건의사항</h3>
+        <textarea name="complain" id="complain" cols="30" rows="10"></textarea>
+      </div>
+      <button type="submit">제출</button>
+      <button type="reset">초기화</button>
+    </form>
+  </body>
+</html>
