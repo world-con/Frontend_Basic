@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS기본</title>
+    <style>
+      p {
+        background-color: aliceblue;
+      }
+      h1 {
+        font-style: italic;
+      }
+      .blue {
+        color: blue;
+        font-size: 30px;
+        font-weight: bold;
+      }
+      #main-container {
+        border: 1px black solid;
+        border-radius: 10px;
+        width: 200px;
+      }
+      #copyright {
+        border: 1px gray dotted;
+      }
+    </style>
+    <link rel="stylesheet" href="./css/05_css기본.css" />
+  </head>
+  <body>
+    <h1>css 기본</h1>
+    <div id="main-container">
+      <p style="color: red; font-size: 30px">빨간글자</p>
+      <p class="blue">파란글자</p>
+      <p class="green">초록글자</p>
+      <p class="purple">보라글자</p>
+    </div>
+    <div id="copyright">
+      <p>(c) 2024 My Website</p>
+    </div>
+  </body>
+</html>
