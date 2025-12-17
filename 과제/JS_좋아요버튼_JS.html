@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>좋아요 버튼</title>
+  </head>
+  <body>
+    <h1>좋아요 버튼</h1>
+    <p>좋아요를 누르면 숫자와 함께 하트 색깔이 빨간색으로 바뀝니다.</p>
+    <button id="likeBtn">
+      <span id="heart">🤍</span><span id="likeCount">0</span>
+    </button>
+
+    <script>
+      const likeBtn = document.getElementById(`likeBtn`);
+      const likeCount = document.getElementById("likeCount");
+      const heart = document.getElementById("heart");
+
+      likeBtn.addEventListener("click", () => {
+        likeBtn.classList.toggle("on");
+        if (likeBtn.classList.contains("on")) {
+          ++likeCount.textContent;
+          heart.textContent = "❤️";
+        } else {
+          --likeCount.textContent;
+          heart.textContent = "🤍";
+        }
+      });
+    </script>
+  </body>
+</html>

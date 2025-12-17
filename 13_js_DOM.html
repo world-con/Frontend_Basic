@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM</title>
+  </head>
+  <body>
+    <h1 id="title">안녕하세요</h1>
+    <p class="desc">첫 번째 설명</p>
+    <p class="desc">두 번째 설명</p>
+    <button onclick="fnClick('홍길동');">클릭</button>
+    <button id="btnEventHandle">이벤트핸들러연결</button>
+
+    <script>
+      function fnClick(name) {
+        const title = document.getElementById("title");
+        console.log(title.textContent);
+        title.textContent = `${name}님반갑습니다.`;
+      }
+      const btn = document.getElementById("btnEventHandle");
+      // btn.addEventListener("click", () => {
+      //   fnClick("홍길동");
+      // });
+      btn.addEventListener("click", function () {
+        fnClick("홍길동");
+      });
+      // title.textContent = "반갑습니다";
+
+      const firstDesc = document.querySelector(".desc");
+      console.log(firstDesc);
+
+      const allDesc = document.querySelectorAll(".desc");
+      console.log(allDesc);
+    </script>
+  </body>
+</html>

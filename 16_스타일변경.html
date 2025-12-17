@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>스타일 변경</title>
+    <style>
+      .highlight {
+        background: yellow;
+        font-weight: bold;
+      }
+      .dark {
+        background: #1a1a1a;
+        color: #fff;
+      }
+      .theme-btn {
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <p id="text">클릭하면 강조됩니다.</p>
+    <button id="btn">강조 토글</button>
+    <button class="theme-btn" id="themeBtn">🌙 다크모드</button>
+    <script>
+      const btn = document.getElementById("btn");
+      const text = document.getElementById("text");
+      const themeBtn = document.getElementById("themeBtn");
+      const body = document.body;
+
+      btn.addEventListener("click", () => {
+        text.classList.add("highlight");
+      });
+
+      themeBtn.addEventListener("click", () => {
+        body.classList.toggle("dark");
+        if (body.classList.contains("darks")) {
+          themeBtn.textContent = "라이트모드";
+        }
+      });
+    </script>
+  </body>
+</html>

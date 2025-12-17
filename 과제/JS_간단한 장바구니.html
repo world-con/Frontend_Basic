@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- 1. 상품 3개 (버튼으로 표시: 사과 1000원, 바나나 1500원, 오렌지 2000원) -->
+    <!-- 2. 상품버튼 클릭 시 장바구니 목록에 추가 -->
+    <!-- 3. 장바구니 항목 옆에 삭제 버튼 -->
+    <!-- 4. 총 합계 금액 실시간 표시 -->
+    <title>장바구니</title>
+    <style>
+      .product-btn {
+        padding: 10px;
+        margin: 5px;
+        cursor: pointer;
+      }
+      .cart-item {
+        display: flex;
+        justify-content: space-between;
+        padding: 5px;
+      }
+      #total {
+        font-size: 20px;
+        font-weight: bold;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>상품 목록</h2>
+    <button class="product-btn" data-name="사과" data-price="1000">
+      🍎 사과 1,000원
+    </button>
+    <button class="product-btn" data-name="바나나" data-price="1500">
+      🍌 바나나 1,500원
+    </button>
+    <button class="product-btn" data-name="오렌지" data-price="2000">
+      🍊 오렌지 2,000원
+    </button>
+
+    <h2>장바구니</h2>
+    <ul id="cart"></ul>
+    <div id="total">총 합계: 0원</div>
+
+    <script>
+      const addBtn = document.querySelectorAll(".product-btn");
+      const cart = document.getElementById("cart");
+      addBtn.addEventListener("click", () => {
+        const newItem = document.createElement("li");
+        newItem.textContent = `${"data-name"}`;
+        cart.appendChild(newItem);
+      });
+    </script>
+  </body>
+</html>
